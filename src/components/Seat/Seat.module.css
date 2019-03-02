@@ -1,0 +1,17 @@
+.seat {
+  -webkit-appearance: none;
+  border: none;
+  padding: 5px;
+  display: inline-block;
+}
+
+.selected {
+  background-color: red;
+}
+
+.unavailable {
+  pointer-events: none;
+}
+
+.ticket {
+}
