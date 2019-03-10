@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { Seat, SeatProps } from './index';
+import { Seat, SeatProps } from './Seat';
 
 const seat: SeatProps = {
   ticketId: 'A14',

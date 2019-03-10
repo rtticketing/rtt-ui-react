@@ -1,51 +1,30 @@
 import React from 'react';
-import { chunk, Grid } from './index';
-import { mount } from 'enzyme';
-
-describe('createGrid', () => {
-  it('should make grid', () => {
-    //given
-    const size = 3;
-    const data = [1, 2, 3, 4, 5, 6, 7];
-
-    //when
-    const result = chunk(data, size);
-
-    //then
-    expect(result).toEqual([[1, 2, 3], [4, 5, 6], [7]]);
-  });
-});
+import { shallow } from 'enzyme';
+import { Grid, InjectedProps } from './Grid';
 
 describe('Grid', () => {
-  it('should render child with separate chunk', () => {
+  it('should inject rows to child componet', () => {
     //given
-    const Child = props => <span>{props.text}</span>;
-    const data = [{ text: 'hello' }, { text: 'world' }, { text: 'I' }, { text: 'find' }, { text: 'react' }, { text: 'kind of' }, { text: 'amazing' }];
-    const columns = 2;
-    const render = props => {
+    const props = {
+      columns: 3,
+      gridData: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    };
+
+    const RowComponent = <T extends any>(props: InjectedProps<T>) => {
       return (
-        <div key={props.rowIndex}>
+        <div data-row-index={props.rowIndex} key={props.rowIndex}>
           {props.row.map((col, i) => (
-            <Child text={col.text} key={i} />
+            <span key={i}>{col}</span>
           ))}
         </div>
       );
     };
-    //when
 
-    const wrapper = mount(
-      <Grid gridData={data} columns={columns}>
-        {render}
-      </Grid>
-    );
+    //when
+    const wrapper = shallow(<Grid {...props}>{RowComponent}</Grid>);
 
     //then
-    // expect(wrapper.containsAllMatchingElements)
+    expect(wrapper.find('[data-row-index]').length).toBe(Math.ceil(props.gridData.length / props.columns));
+    expect(wrapper.find('[data-row-index=0]').children().length).toBe(props.columns);
   });
 });
-
-class Controller {
-  constructor(store, mediaPlayerRef) {}
-
-  onUserPlay() {}
-}
