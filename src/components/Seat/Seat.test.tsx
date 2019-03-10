@@ -5,7 +5,7 @@ import { Seat } from './index';
 
 describe('<Seat/>', () => {
   describe('selected prop', () => {
-    it('should have selected class name', () => {
+    it('should have a selected class name', () => {
       //given
       const selected = true;
       const ticketId = 1;
@@ -15,7 +15,7 @@ describe('<Seat/>', () => {
       const wrapper = shallow(<Seat selected={selected} ticketId={ticketId} available={available} />);
 
       //then
-      expect(wrapper.hasClass(styles.selected)).toBe(true);
+      expect(wrapper.hasClass(styles['seat--selected'])).toBe(true);
     });
 
     it('should not have selected class name', () => {
@@ -28,7 +28,7 @@ describe('<Seat/>', () => {
       const wrapper = shallow(<Seat selected={selected} ticketId={ticketId} available={available} />);
 
       //then
-      expect(wrapper.hasClass(styles.selected)).toBe(false);
+      expect(wrapper.hasClass(styles['seat--selected'])).toBe(false);
     });
   });
 
@@ -106,6 +106,6 @@ describe('<Seat/>', () => {
     const wrapper = shallow(<Seat selected={selected} ticketId={ticketId} available={available} />);
 
     //then
-    expect(wrapper.hasClass(styles.unavailable)).toBe(true);
+    expect(wrapper.hasClass(styles['seat--unavailable'])).toBe(true);
   });
 });

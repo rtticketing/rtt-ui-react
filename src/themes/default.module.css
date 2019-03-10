@@ -1,0 +1,8 @@
+:root {
+  --seat-bg-default: lightblue;
+  --seat-color-default: #fff;
+  --seat-bg-selected: pink;
+  --seat-color-selected: #fff;
+  --seat-bg-unavailable: grey;
+  --seat-color-unavailable: #fff;
+}
