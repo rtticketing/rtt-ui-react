@@ -1,13 +1,13 @@
 import React from 'react';
-import c from 'classnames';
+import cn from 'classnames';
 import styles from './Seat.module.css';
 
-interface PayloadType {
+export interface PayloadType {
   selected: boolean;
   ticketId: string | number;
 }
 
-interface SeatProps {
+export interface SeatProps {
   selected?: boolean;
   ticketId: string | number;
   available: boolean;
@@ -19,11 +19,11 @@ export const Seat = (props: SeatProps) => {
   return (
     <button
       type="button"
-      className={c(
-        styles.seat,
+      className={cn(
+        styles['seat'],
         {
-          [styles.selected]: props.selected,
-          [styles.unavailable]: !props.available
+          [styles['seat--selected']]: props.selected,
+          [styles['seat--unavailable']]: !props.available
         },
         ...(props.classNames || [])
       )}

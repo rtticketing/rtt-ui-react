@@ -3,15 +3,17 @@
   border: none;
   padding: 5px;
   display: inline-block;
+  color: var(--seat-color-default);
+  background-color: var(--seat-bg-default);
 }
 
-.selected {
-  background-color: red;
+.seat--selected {
+  color: var(--seat-color-selected);
+  background-color: var(--seat-bg-selected);
 }
 
-.unavailable {
+.seat--unavailable {
   pointer-events: none;
-}
-
-.ticket {
+  color: var(--seat-color-unavailable);
+  background-color: var(--seat-bg-unavailable);
 }

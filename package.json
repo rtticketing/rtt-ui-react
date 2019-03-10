@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.6",
-    "@types/node": "11.9.5",
-    "@types/react": "16.8.4",
-    "@types/react-dom": "16.8.2",
-    "@types/socket.io-client": "^1.4.32",
+    "classnames": "^2.2.6",
     "enzyme-adapter-react-16": "^1.9.1",
+    "ramda": "^0.26.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
@@ -20,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,7 +31,26 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@storybook/addon-actions": "^5.0.1",
+    "@storybook/addon-links": "^5.0.1",
+    "@storybook/addons": "^5.0.1",
+    "@storybook/react": "^5.0.1",
+    "@types/classnames": "^2.2.7",
     "@types/enzyme": "^3.9.0",
+    "@types/storybook__addon-actions": "^3.4.2",
+    "@types/storybook__react": "^4.0.1",
+    "@types/jest": "24.0.6",
+    "@types/node": "11.9.5",
+    "@types/ramda": "^0.25.51",
+    "@types/react": "16.8.4",
+    "@types/react-dom": "16.8.2",
+    "@types/socket.io-client": "^1.4.32",
+    "babel-loader": "^8.0.5",
     "enzyme": "^3.9.0"
+  },
+  "resolutions": {
+    "@types/react": "16.8.4",
+    "@types/react-dom": "16.8.2"
   }
 }
