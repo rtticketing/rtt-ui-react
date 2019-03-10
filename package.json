@@ -48,9 +48,5 @@
     "@types/socket.io-client": "^1.4.32",
     "babel-loader": "^8.0.5",
     "enzyme": "^3.9.0"
-  },
-  "resolutions": {
-    "@types/react": "16.8.4",
-    "@types/react-dom": "16.8.2"
   }
 }

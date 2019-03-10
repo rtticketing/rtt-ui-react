@@ -1487,7 +1487,15 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@16.8.4":
+"@types/react@*":
+  version "16.8.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.7.tgz#7b1c0223dd5494f9b4501ad2a69aa6acb350a29b"
+  integrity sha512-0xbkIyrDNKUn4IJVf8JaCn+ucao/cq6ZB8O6kSzhrJub1cVSqgTArtG0qCfdERWKMEIvUbrwLXeQMqWEsyr9dA==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@16.8.4":
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.4.tgz#134307f5266e866d5e7c25e47f31f9abd5b2ea34"
   integrity sha512-Mpz1NNMJvrjf0GcDqiK8+YeOydXfD8Mgag3UtqQ5lXYTsMnOiHcKmO48LiSWMb1rSHB9MV/jlgyNzeAVxWMZRQ==
@@ -5342,10 +5350,10 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-focus-lock@^0.5.2:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.5.4.tgz#537644d61b9e90fd97075aa680b8add1de24e819"
-  integrity sha512-A9ngdb0NyI6UygBQ0eD+p8SpLWTkdEDn67I3EGUUcDUfxH694mLA/xBWwhWhoj/2YLtsv2EoQdAx9UOKs8d/ZQ==
+focus-lock@^0.6.0:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.6.1.tgz#904d8d4d3a309e108d57b3a0f417c31b7f16bf24"
+  integrity sha512-q8DoDxBAjeMbrR61CJEvbpLZXgBhF9sNQOSiPigw0QFlZxQGDmGt0maayFkSZhOIFo4chq8kyxrFc4kNhLBfWw==
 
 follow-redirects@^1.0.0:
   version "1.7.0"
@@ -9963,12 +9971,12 @@ react-fast-compare@^2.0.2:
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
 react-focus-lock@^1.17.7:
-  version "1.17.7"
-  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.17.7.tgz#ea7fd05d88d0e32833cad241f9333c124c35ba9a"
-  integrity sha512-zDCqkIhuuHCCmWzJghAz6EM6ROx8/sHhQJWjmO6oteQRHX+xTCE5FWIu3zLB5UiUa5eLd66tTh4Fs8YDp0G+6Q==
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.18.0.tgz#c22d223fbc6d376fa5b81c767f1ed49bd8d5b59f"
+  integrity sha512-zwC6O4JP5qdaY1+FFQAAPCHfllyNFC3kIAyQgutBXlMy9sXu4f3XddxA+X8WQnMEG45IT7g9hrOTmk/5mMr2Uw==
   dependencies:
     "@babel/runtime" "^7.0.0"
-    focus-lock "^0.5.2"
+    focus-lock "^0.6.0"
     prop-types "^15.6.2"
     react-clientside-effect "^1.2.0"
 
